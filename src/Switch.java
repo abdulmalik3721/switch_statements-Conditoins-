@@ -26,12 +26,38 @@ public class Switch {
 
         }
 
+        String month="october";
+
+        System.out.println(month + " is in the " + getQuarter(month) + " quarter");
 
 
 
 
 
 
+
+    }
+
+    public static String getQuarter(String month){
+        switch(month){
+            case "JANUARY":
+            case "FEBRUARY":
+                case "MARCH":
+                    return "1st";
+            case "april":
+            case "may":
+            case "june":
+                return " 2nd";
+            case "july":
+            case "august":
+            case "september":
+                return "3rd";
+            case "october":
+            case "november":
+            case "december":
+                return "4th";
+        }
+        return "bad";
     }
 }
 
