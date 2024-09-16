@@ -14,7 +14,7 @@ public class Switch {
         int switchValu=2;
         switch(switchValu){
             case 1:
-                System.out.println("value was one");
+                System.out.println("value was 1");
                 break;
             case 2: case 3: case 4:
                 System.out.println("value may be 2 ,3,4");
