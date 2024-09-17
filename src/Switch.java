@@ -26,7 +26,7 @@ public class Switch {
 
         }
 
-        String month="october";
+        String month="JANUARY";
 
         System.out.println(month + " is in the " + getQuarter(month) + " quarter");
 
@@ -40,11 +40,15 @@ public class Switch {
 
     public static String getQuarter(String month){
         return switch (month) {
-            case "JANUARY", "FEBRUARY", "MARCH" -> "1st";
+            case "JANUARY", "FEBRUARY", "MARCH" -> {yield "1st";}
             case "april", "may", "june" -> " 2nd";
             case "july", "august", "september" -> "3rd";
             case "october", "november", "december" -> "4th";
-            default -> "bad";
+            default -> {
+                String badResponse = month + " is bad";
+                yield badResponse;
+            }
+
         };
     }
 }
